@@ -604,7 +604,10 @@
       inset: 0;
       width: 0%;
       background: #002099;
-      transition: width .6s cubic-bezier(.4,0,.2,1); 
+      transition: width .6s cubic-bezier(.4,0,.2,1), background .3s ease;
+    }
+    .stage-step.is-active + .stage-connector .stage-connector-fill {
+      background: #005EFF;
     }
 
     @media (max-width: 640px) {
@@ -654,13 +657,10 @@
       }
 
       .stage-node {
-        width: 28px;
-        height: 28px;
-        font-size: 12px;
+        /* Keep desktop size on mobile */
       }
 
       .stage-label {
-        font-size: 11px;
         max-width: none;
         position: absolute;
         top: 100%;
